@@ -1,30 +1,27 @@
 document.querySelector("#search").addEventListener("click", function () {
-    searchGif();
+    search();
   });
   
-  document.querySelector("#reset").addEventListener("click", function () {
-    location.reload();
-  });
-  
-  function searchGif() {
-    document.getElementById("gifView").innerHTML = ""; //чтобы не множить 5 картинок при многоразовом нажатии на поиск
-  
-    let gifSearch = document.getElementById("gifSearch").value;
+  search = () => {
+     
+    let imgSearch = document.getElementById("imgSearch").value;
   
     fetch(
       "https://api.giphy.com/v1/gifs/search?api_key=YE5Q5b8pJlSFjrfT1KcSWaEQy8KsAdIj&q=" +
-        gifSearch +
+        imgSearch +
         "&limit=5&offset=0&rating=g&lang=en"
     )
       .then((response) => response.json())
       .then((gif) => {
-        document.getElementById("gifView").innerHTML +=
-          `<img src="${gif.data[0].images.fixed_width.url}" alt="${gifSearch}" class="img"></img>` +
-          `<img src="${gif.data[1].images.fixed_width.url}" alt="${gifSearch}" class="img"></img>` +
-          `<img src="${gif.data[2].images.fixed_width.url}" alt="${gifSearch}" class="img"></img>` +
-          `<img src="${gif.data[3].images.fixed_width.url}" alt="${gifSearch}" class="img"></img>` +
-          `<img src="${gif.data[4].images.fixed_width.url}" alt="${gifSearch}" class="img"></img>`;
+        document.getElementById("imgViewe").innerHTML +=
+          `<img src="${gif.data[0].images.fixed_width.url}" alt="${imgSearch}" class="img"></img>` +
+          `<img src="${gif.data[1].images.fixed_width.url}" alt="${imgSearch}" class="img"></img>` +
+          `<img src="${gif.data[2].images.fixed_width.url}" alt="${imgSearch}" class="img"></img>` +
+          `<img src="${gif.data[3].images.fixed_width.url}" alt="${imgSearch}" class="img"></img>` +
+          `<img src="${gif.data[4].images.fixed_width.url}" alt="${imgSearch}" class="img"></img>`;
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error)) 
+      .break;
   }
+  
   

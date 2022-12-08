@@ -1,13 +1,14 @@
-.gifView {
-    margin: 8%;
+.imgViewe {
+    margin: 2%;
     display: flex;
-  flex-wrap: wrap;}
+  flex-wrap: no-wrap;
+}
 
-  .giifView img {
+  .imgViewe img {
     width: 20%;
     height: 20%;
-    object-fit: fitcontent;
-    margin: 8%;
+    object-fit: contain;
+    margin: 1%;
   
   }
     
