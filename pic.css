@@ -1,0 +1,14 @@
+.gifView {
+    margin: 8%;
+    display: flex;
+  flex-wrap: wrap;}
+
+  .giifView img {
+    width: 20%;
+    height: 20%;
+    object-fit: fitcontent;
+    margin: 8%;
+  
+  }
+    
+    
