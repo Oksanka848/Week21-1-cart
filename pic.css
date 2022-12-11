@@ -1,15 +1,12 @@
-.imgViewe {
-    margin: 2%;
-    display: flex;
+.img-vieve {
+  margin: 2%;
+  display: flex;
   flex-wrap: no-wrap;
 }
 
-  .imgViewe img {
-    width: 20%;
-    height: 20%;
-    object-fit: contain;
-    margin: 1%;
-  
-  }
-    
-    
+.img-vieve img {
+  width: 20%;
+  height: 20%;
+  object-fit: contain;
+  margin: 1%;
+}
