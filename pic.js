@@ -15,11 +15,11 @@ document.querySelector("#search").addEventListener("click", function () {
       .then((gif) => {
         console.log(gif);
         document.getElementById("img-vieve").innerHTML +=
-          `<img src="${gif.data[0].images.downsized_large.url}" alt="${imgSearch}" class="img"></img>` +
-          `<img src="${gif.data[1].images.original.url}" alt="${imgSearch}" class="img"></img>` +
-          `<img src="${gif.data[2].images.downsized.url}" alt="${imgSearch}" class="img"></img>` +
-          `<img src="${gif.data[3].images.downsized.url}" alt="${imgSearch}" class="img"></img>` +
-          `<img src="${gif.data[4].images.original.url}" alt="${imgSearch}" class="img"></img>`;
+          `<img src="${gif.data[0].images.downsized_large.url}" alt="${imgSearch}"/>` +
+          `<img src="${gif.data[1].images.original.url}" alt="${imgSearch}"/>` +
+          `<img src="${gif.data[2].images.downsized.url}" alt="${imgSearch}"/>` +
+          `<img src="${gif.data[3].images.downsized.url}" alt="${imgSearch}"/>` +
+          `<img src="${gif.data[4].images.original.url}" alt="${imgSearch}"/>`;
       })
       .catch((error) => console.log(error)) 
       .break;
